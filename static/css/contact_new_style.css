@@ -1,0 +1,459 @@
+/*---------------------------------------
+  CUSTOM PROPERTIES ( VARIABLES )             
+-----------------------------------------*/
+:root {
+
+  /* ============================================== */
+  
+  /* Colors */
+  --international-orange-engineering: #ff5722; /*hsl(1, 91%, 37%)*/
+  --cadet-blue-creyola: hsl(222, 14%, 69%);
+  --oxford-blue-1: hsl(222, 47%, 15%);
+  --oxford-blue-2: hsl(222, 44%, 14%);
+  --oxford-blue-3: #e64a19;  /*hsl(222, 50%, 11%)*/
+  /* --sonic-silver: hsl(0, 0%, 44%); */
+  --sonic-silver: hsl(0, 0%, 0%);
+  --space-cadet: hsl(222, 44%, 18%);
+  --pastel-pink: hsl(1, 53%, 75%);
+  --eerie-black: hsl(0, 0%, 15%);
+  --light-gray: hsl(0, 0%, 80%);
+  --white: hsl(0, 0%, 100%);
+  
+  /* Typography */
+  
+  --ff-chakra-petch: /*'Chakra Petch',*/ sans-serif;
+  
+  --ff-mulish: 'Mulish', sans-serif;
+  
+  --fs-1: 3.5rem;
+  --fs-2: 2.8rem;
+  --fs-3: 2.4rem;
+  --fs-4: 1.8rem;
+  --fs-5: 1.4rem;
+  --fs-6: 1.2rem;
+  
+  --fw-400: 400;
+  --fw-600: 600;
+  --fw-700: 700;
+  
+  /* Spacing */
+  /* --section-padding: 50px; */
+  
+  /* box shadow */
+  --shadow: 0px 0px 100px 0px hsl(216, 9%, 90%);
+  
+  /* border radius */
+  --radius-pill: 100px;
+  --radius-circle: 50%;
+  
+  /* transition */
+  --transition: 0.25s ease;
+  --cubic-out: cubic-bezier(0.05, 0.83, 0.52, 0.97);
+
+  /* ============================================== */
+  --white-color:                  #ffffff;
+  --primary-color:                #E76F51;
+  --secondary-color:              #E9C46A;
+  --section-bg-color:             #f0f8ff;
+  --custom-btn-bg-color:          #F4A261;
+  --custom-btn-bg-hover-color:    #E76F51;
+  --dark-color:                   #000000;
+  --p-color:                      #717275;
+  --link-hover-color:             #E76F51;
+
+  --body-font-family:             'Unbounded', sans-serif;
+
+  --h1-font-size:                 42px;
+  --h2-font-size:                 36px;
+  --h3-font-size:                 28px;
+  --h4-font-size:                 24px;
+  --h5-font-size:                 22px;
+  --h6-font-size:                 20px;
+  --p-font-size:                  16px;
+  --menu-font-size:               12px;
+  --btn-font-size:                14px;
+  --copyright-font-size:          14px;
+
+  --border-radius-large:          100px;
+  --border-radius-medium:         20px;
+  --border-radius-small:          10px;
+
+  --font-weight-light:            300;
+  --font-weight-normal:           400;
+  --font-weight-semibold:         600;
+  --font-weight-bold:             700;
+}
+
+body {
+  background-color: var(--white-color);
+  font-family: var(--body-font-family); 
+}
+
+
+/*---------------------------------------
+  TYPOGRAPHY               
+-----------------------------------------*/
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--dark-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-weight-semibold);
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-weight-bold);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-weight-bold);
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+}
+
+h4 {
+  font-size: var(--h4-font-size);
+}
+
+h5 {
+  font-size: var(--h5-font-size);
+}
+
+h6 {
+  color: var(--white);
+  font-size: var(--h6-font-size);
+}
+
+p {
+  color: var(--p-color);
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-normal);
+}
+
+ul li {
+  color: var(--p-color);
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-normal);
+}
+
+a, 
+button {
+  touch-action: manipulation;
+  transition: all 0.3s;
+}
+
+a {
+  display: inline-block;
+  /* color: var(--primary-color); */
+  color: brown;
+  text-decoration: none;
+}
+
+a:hover {
+  /* color: var(--link-hover-color); */
+  color: var(--international-orange-engineering);
+
+}
+
+b,
+strong {
+  font-weight: var(--font-weight-bold);
+}
+
+
+/*---------------------------------------
+  SECTION               
+-----------------------------------------*/
+.section-padding {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+::selection {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+}
+
+
+
+
+
+/*---------------------------------------
+  CONTACT               
+-----------------------------------------*/
+.contact-section {
+  /* background: var(--custom-btn-bg-color); */
+  background: var(--space-cadet);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 450px 450px 0 0;
+  border-color: var(--white-color) transparent transparent;
+  pointer-events: none;
+}
+
+.contact-section .container {
+  position: relative;
+}
+
+.contact-title{
+  color: var(--international-orange-engineering);
+}
+
+.contact-section p {
+  color: var(--white-color);
+  font-size: var(--h6-font-size);
+}
+
+.contact-link {
+  color: var(--white-color);
+}
+
+
+
+/*---------------------------------------
+  EBOOK DOWNLOAD FORM               
+-----------------------------------------*/
+.ebook-download-form {
+  border-radius: var(--border-radius-medium);
+  position: relative;
+  z-index: 2;
+  padding: 50px;
+}
+
+
+/*---------------------------------------
+  CUSTOM FORM               
+-----------------------------------------*/
+.custom-form .form-control {
+  border-radius: var(--border-radius-large);
+  box-shadow: none;
+  color: var(--p-color);
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-right: 40px;
+  padding-left: 20px;
+  outline: none;
+}
+
+.custom-form .form-control:focus,
+.custom-form .form-control:hover {
+  border-color: var(--international-orange-engineering);
+}
+
+.custom-form .form-control:focus + .input-group-text .custom-form-icon,
+.custom-form .form-control:hover + .input-group-text .custom-form-icon {
+  opacity: 1;
+}
+
+.custom-form .input-group-text {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: 10px;
+}
+
+.custom-form-icon {
+  position: relative;
+  z-index: 22;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.input-group:not(.has-validation)>.dropdown-toggle:nth-last-child(n+3), 
+.input-group:not(.has-validation)>.form-floating:not(:last-child)>.form-control,
+.input-group:not(.has-validation)>.form-floating:not(:last-child)>.form-select, 
+.input-group:not(.has-validation)>
+:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating) {
+  border-radius: var(--border-radius-large);
+}
+
+
+.custom-form button[type="submit"] {
+  background: var(--space-cadet);
+  border: none;
+  border-radius: var(--border-radius-large);
+  color: var(--white-color);
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-semibold);
+  transition: all 0.3s;
+  margin-bottom: 0;
+}
+
+.custom-form button[type="submit"]:hover,
+.custom-form button[type="submit"]:focus {
+  background: var(--international-orange-engineering);
+  border-color: transparent;
+}
+
+
+/*---------------------------------------
+  SOCIAL ICON               
+-----------------------------------------*/
+.social-icon {
+  margin: 0;
+  padding: 0;
+}
+
+.social-icon-item {
+  list-style: none;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.social-icon-link {
+  background: var(--international-orange-engineering);
+  border-radius: var(--border-radius-large);
+  color: var(--white-color);
+  font-size: 14px;
+  display: block;
+  margin-right: 10px;
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  line-height: 36px;
+  opacity: 0.9;
+  transition: background 0.2s, color 0.2s;
+}
+
+.social-icon-link:hover {
+  background: var(--international-orange-engineering);
+  opacity: 0.8;
+  color: var(--white-color);
+}
+
+
+
+/*---------------------------------------
+  RESPONSIVE STYLES               
+-----------------------------------------*/
+@media screen and (max-width: 991px) {
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 36px;
+    
+  }
+
+  h3 {
+    font-size: 32px;
+  }
+
+  h4 {
+    font-size: 28px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+  h6 {
+    font-size: 18px;
+  }
+
+  .section-padding {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.65);
+  }
+
+  .navbar-expand-lg .navbar-nav {
+    padding-bottom: 20px;
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 0;
+  }
+
+  .scrollspy-example-2 .scrollspy-example-item:first-child {
+    padding-top: 0;
+  }
+
+  .scrollspy-example-item h5 {
+    padding-bottom: 5px;
+  }
+
+  .book-section-info {
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .ebook-download-form {
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+
+  h4 {
+    font-size: 22px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+  .navbar-brand {
+    font-size: var(--p-font-size);
+  }
+
+  .navbar-brand-icon {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .navbar-brand-icon::after {
+    top: 5px;
+  }
+
+  .btn-naira > span, 
+  .btn-naira .btn-icon {
+    font-size: 12px;
+    padding: 5px 15px;
+  }
+}

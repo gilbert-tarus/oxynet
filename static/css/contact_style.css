@@ -1,0 +1,155 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'unbounded', sans-serif;
+}
+
+.contact-section {
+  background-color: #F4A261;
+  position: relative;
+  overflow: hidden;
+}
+
+.container{
+  position: relative;
+  width: 100%;
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  padding-right: calc(var(--bs-gutter-x)* .5);
+  padding-left: calc(var(--bs-gutter-x)* .5);
+  margin-right: auto;
+  margin-left: auto;
+}
+.section-padding{
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.section{
+  display: block;
+}
+
+.row{
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1* var(--bs-gutter-y));
+  margin-right: calc(-.5* var(--bs-gutter-x));
+  margin-left: calc(-.5* var(--bs-gutter-x));
+}
+
+.mx-auto{
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.custom-form{
+  border-radius: 20px;
+  position: relative;
+  z-index: 2;
+  padding: 50px;
+}
+
+.bg-white{
+  --bs-bg-opacity: 1;
+  --bs-white-rgb: 255, 255, 255;
+  background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity));
+}
+
+.shadow{
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+}
+
+form{
+  display: block;
+  margin-top: 0em;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.mb-1{
+  margin-bottom: .25rem;
+}
+
+.mb-5{
+  margin-bottom: 3rem;
+}
+
+h2{
+  font-size: 36px;
+  font-weight: 700;
+
+}
+
+h2, h3, h4, h5, h6{
+  color: #000000;
+}
+
+.col-lg-5{
+  flex: 0 0 auto;
+  width: 41.6666667%;
+}
+
+
+@media (min-width: 1400px) {
+  .container{
+    max-width: 1320;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+.container{
+  background-color: orange;
+  padding: 5px;
+  display: flex;
+  align-items: first baseline;
+  justify-content: space-around;
+}
+
+
+.form{
+  background-color: white;
+  height: 250px;
+  border-radius: 20px;
+  position: relative;
+  z-index: 2;
+  padding: 50px;
+}
+
+.fa{     
+  padding: 10px;
+  font-size: 20px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  background-color: bisque;
+  border-radius: 10px;
+  color: white;
+}
+a{
+  color: white;
+}
+.social-icon-link{
+  text-decoration: none;
+}
+.social-icon-item{
+  list-style: none;
+  display: inline;
+} */

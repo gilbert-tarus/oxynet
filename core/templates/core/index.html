@@ -1,0 +1,663 @@
+{% load compress %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary meta tags -->
+    <title>Oxynet -  IT solutions & Service </title>
+    <meta name="title" content="Oxynet -  IT solutions & Service">
+    <meta name="description" content="This is an IT Solutions & Internet Service Provider Website created by Tarus Gilbert">
+    
+    <!-- fivicon -->
+    <link rel="shortcut icon" href="./favicon.png" type="image/png">
+    
+    <!-- goole fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Mulish&display=swap"
+    rel="stylesheet">
+    
+    <!-- Material Icon font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@40,600,0,0" />
+    
+    
+    <!-- Custom css link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- preload images -->
+    <link rel="preload" as="image" href="{% static 'images/logo-no-bg.png' %}">
+    <link rel="preload" as="image" href="{% static 'images/hero-bg-fiber-cables-3.png' %}">
+    
+    <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
+    
+    {% compress css %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+    
+    <link rel="stylesheet" href="{% static 'css/bootstrap-icons.css'%}">
+    
+    <link rel="stylesheet" href="{% static '/css/style.css'%}">
+    
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% endcompress %}
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="#hero">
+                <img src="{% static 'images/logo.png' %}" width="65" height="50" alt="oxynet home">
+            </a>
+            <nav class="navbar"  data-navbar>
+                <ul class="navbar-list">
+                    <li><a href="#hero" class="navbar-link">Home</a></li>
+                    <li><a href="#about" class="navbar-link">About</a></li>
+                    <li><a href="#service" class="navbar-link">Services</a></li>
+                    <li><a href="#work" class="navbar-link">Projects</a></li>
+                    <li><a href="#contact" class="navbar-link">Contact Us</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="btn btn-primary">
+                <span class="span">Get Info</span>
+                <span class="material-symbols-rounded">arrow_forward</span>
+            </a>
+            <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
+                <span class="nav-toggle-icon icon-1"></span>
+                <span class="nav-toggle-icon icon-2"></span>
+                <span class="nav-toggle-icon icon-3"></span>
+            </button>
+        </div>
+    </header>
+    
+    
+    <!-- MAIN -->
+    <main>
+        <article>
+            <!-- HERO SECTION -->
+            
+            <section class="hero has-bg-image" id="hero" aria-label="home" style="background-image: url('{% static 'images/hero-bg-fiber-cables-3.png' %}');">
+                <div class="container">
+                    <div class="hero-content">
+                        <p class="section-subtitle :dark">
+                            Bringing Technology Home
+                        </p>
+                        <h1 class="h1 section-title">
+                            Innovative Telecommunications Solutions for a Connected future
+                        </h1>
+                        <p class="section-text">
+                            Delivering cost-effective optical fiber installation and structured cabling services.
+                        </p>
+                        <a href="contact.html" class="btn">
+                            <span class="span">Get In Touch</span>
+                            <span class="material-symbols-rounded">arrow_forward</span>
+                        </a>
+                    </div>
+                    <figure class="hero-banner" style="--width: 150; --height: 140;">
+                        <img src="{% static 'images/world-spin-removebg-preview.png' %}" alt="rotating world"  width="150" height="140" class="move-anim">
+                    </figure>  
+                </div>
+            </section>
+            
+            <!-- ABOUT -->
+            
+            <section class="section about has-before" id="about" aria-labelledby="about-label">
+                <div class="container">
+                    <div class="about-content">
+                        <h2 class="h2 section-title">About Us</h2>
+                        <div class="carousel-container">
+                            <div class="carousel">
+                                <div class="slide">
+                                    <p class="section-text">
+                                        The company was incorporated under the laws of Kenya in October 2021.
+                                    </p>
+                                </div>
+                                <div class="slide">
+                                    <p class="section-text">
+                                        The company carry out business of Optical Fiber installation, Structured Cabling, survey and design amongst several IT solutions.
+                                    </p>
+                                    <a href="#service" class="btn" style="padding: 5px; border-radius: 5px; text-align: center;" >Learn More</a>
+                                </div>
+                                <div class="slide">
+                                    <p class="section-text">
+                                        Oxynet aims at providing a wide range of advanced telecommunications solutions to leading operators and vendors in Kenya.
+                                    </p>
+                                </div>
+                            </div>
+                            <button class="prev" onclick="prevSlide()">&#10094;</button>
+                            <button class="next" onclick="nextSlide()">&#10095;</button>
+                            <div class="dots-container">
+                                <span class="dot" onclick="currentSlide(1)"></span>
+                                <span class="dot" onclick="currentSlide(2)"></span>
+                                <span class="dot" onclick="currentSlide(3)"></span>
+                            </div>
+                        </div>
+                        <br>
+                        <h2 class="h2 section-title">Why Choose Us</h2>
+                        <ul class="about-list">
+                            <li class="about-item">
+                                <p>
+                                    <strong class="display-1 strong">MISSION</strong> <br>
+                                    To become a leading provider of
+                                    Telecommunication solutions in both private
+                                    and public sector in the region. This will involve
+                                    supporting and working with establishments to
+                                    conceptualize, formulate, execute, implement,
+                                    and operate quality, productive, efficient and
+                                    cost-effective information, and communication
+                                    system solutions. 
+                                </p>
+                            </li>
+                            
+                            <li class="about-item">
+                                <p>
+                                    <strong class="display-1 strong">VISION</strong> <br>
+                                    To collaborate and partner with players in
+                                    Telecommunication industry to address and
+                                    support the implementation of information
+                                    and communication system needs, goals and
+                                    cost objectives of establishments effectively
+                                    and at world class standards.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- SERVICE -->
+            
+            <section class="section" id="service">
+                <div class="service-header">
+                    <h2 class="h2 section-title">Our Services</h2>
+                    <p class="section-subtitle" style="text-align: center;">
+                        Explore our range of telecommunication and network services designed to meet your business needs.
+                    </p>
+                </div>
+                <div class="services-sec">
+                    <!-- Telecommunications -->
+                    <div class="services-card">
+                        <h2>Telecommunications</h2>
+                        <figure class="card-icon">
+                            <img src="{% static 'images/world-spin.png' %}" width="110" height="110"  style="margin: auto;" alt="telecommunications">
+                        </figure><br>
+                        <p>
+                            Oxynet Ltd conducts periodic recertification and re-evaluation for all the internal experts 
+                            <span class="more-text">
+                                in concert with equipment manufacturers to keep our skill levels high and up to date. We are involved in different spheres of telecommunication project.
+                            </span> 
+                        </p>
+                        <a href="#" class="btn-link read-more">Read more</a>
+                        <a href="contact.html" class="btn">Contact Us</a>
+                    </div>
+                    
+                    <!-- Pre-Installation & Site Surveys -->
+                    <div class="services-card">
+                        <h2>Pre-Installation & Site Surveys</h2>
+                        <figure class="card-icon">
+                            <img src="{% static 'images/network-engineers-working.jpg' %}" width="110" height="110" alt="Site Survey">
+                        </figure>
+                        <p>
+                            We are able to offer a full suite of site acquisition services,
+                            covering the following:
+                        </p>
+                        <ul>
+                            <li>Site surveys </li>
+                            <li>Landlord and rent negotiations </li>
+                            <li>All general permit handling including council and KeNHA crossing approvals</li>
+                            <span class="more-text">
+                                <li>Environmental Impact Assessments </li>
+                                <li>Ongoing Management of lease agreements </li>
+                                <li>Cable trenching and power access way leave </li>
+                            </span>
+                        </ul>
+                        
+                        <a href="#" class="btn-link read-more">Read more</a>
+                        <a href="contact.html" class="btn">Schedule a Site Survey</a>
+                    </div>
+                    
+                    <!-- Survey & Design -->
+                    <div class="services-card">
+                        <h2>Survey & Design</h2>
+                        <figure class="card-icon">
+                            <img src="{% static 'images/service-survey-and-design-1.jpg' %}" width="110" height="110" alt="survey and design">
+                        </figure>
+                        <p class="card-text">
+                            At Oxynet Ltd we believe in proper route survey, which will capture important critical features to be included in the proposed
+                            fiber optic cable route drawing, showing information about terrain
+                            details, obstacles, and quantities.
+                            This entire process leads to a valuable cost predictor and
+                            implementation guide. 
+                            <span class="more-text">
+                                From proposed fiber optic route surveys
+                                to drafting and drawing of the surveys, Oxynet Company Ltd also provides the
+                                expertise needed in construction plans for trenching,coupling,
+                                backfilling, fiber optic cable pulling, and fiber optic cable termination.
+                                Our tools involve geographic information systems mapping software,
+                                aerial imaging, AutoCAD MAP, Mapinfo, and Google Earth, various
+                                owner utilized proprietary software.
+                            </span> 
+                        </p>
+                        <a href="#" class="btn-link read-more">Read more</a>
+                        <a href="contact.html" class="btn">Get a Design Quote</a>
+                    </div>
+                    
+                    <!-- Fibre Splicing, Termination & Testing -->
+                    <div class="services-card">
+                        <h2>Fibre Splicing, Termination & Testing</h2>
+                        <figure class="card-icon">
+                            <img src="{% static 'images/service-optical-fiber-splicing.jpg' %}" width="110" height="110" alt="fiber splicing, termination and testing">
+                        </figure>
+                        <p class="card-text">
+                            Oxynet Ltd uses fusion technique to terminate the fibre to great precision leading to zero/low losses to meet required international standards. Depending on the
+                            <span class="more-text"> design of the network, the ITU standards which must be adopted will be based mainly on the sensitivity of the active terminal equipment and the link.
+                            </span> 
+                        </p>
+                        <a href="#" class="btn-link read-more">Read more</a>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                    
+                    <!-- Structured Cabling -->
+                    <div class="services-card">
+                        <h2>Structured Cabling</h2>
+                        <figure class="card-icon">
+                            <img src="{% static 'images/service-networking-and-cabling.jpg' %}" width="110" height="110" alt="stractured cabling">
+                        </figure>
+                        
+                        <p class="card-text">
+                            Oxynet Ltd offers you a one-stop turnkey solution for your entire
+                            network needs.
+                            <span class="more-text">
+                                We install and commission large Local Area and Wide Area
+                                Networks (LAN/ WANs).
+                                All our projects are undertaken within strict supervision drawn from
+                                well established advisory and consultancy services to ensure
+                                quality work to the client’s satisfaction.
+                            </span>
+                        </p>
+                        <a href="#" class="btn-link read-more">Read more</a>
+                        <a href="contact.html" class="btn">Contact Us</a>
+                        <!-- for Cabling Solutions -->
+                    </div>
+                    <div class="services-card">
+                        <h2>Civil Works</h2>
+                        <figure class="card-icon">
+                            <img src="{% static 'images/civil-works.jpg' %}" width="110" height="110" alt="civil works">
+                        </figure>
+                        <p class="card-text">
+                            Network infrastructure civil works such as Site Rollout, Fiber
+                            works and equipment buildings is carried out by a team comprising highly skilled engineers and site supervisors. The Department 
+                            <span class="more-text"> 
+                                is also responsible for ensuring compliance
+                                with required standards in materials testing and supervision of
+                                concrete works and cube tests.
+                            </span>
+                        </p>
+                        <a href="#" class="btn-link read-more">Read more</a>
+                    </div>
+                    <!-- New -->
+                    <!-- Wireless Solutions Services -->
+                    <div class="services-card">
+                        <h2>Wireless Solutions Services</h2>
+                        <figure class="card-icon">
+                            <img src="{% static 'images/Wifi.png' %}" width="110" height="110" alt="fiber splicing, termination and testing">
+                        </figure>
+                        
+                        <p class="card-text">
+                            <b>Detailed Site Surveys</b><br>
+                            We conduct thorough assessments of your environment to determine optimal Wi-Fi coverage, considering factors such as building structure, user density, and potential interference.
+                            <span class="more-text">
+                                <br><b>Wi-Fi Network Design</b><br>
+                                Our skilled engineers create customized network designs that align with your business objectives and ensure seamless connectivity.
+                                
+                                <br><b>Wi-Fi Site Deployment</b><br>
+                                We efficiently install and configure your wireless network, guaranteeing optimal performance and reliability from the outset.
+                                
+                                <br><b>Wi-Fi Network Updates</b><br>
+                                As technology evolves, we keep your network up-to-date with the latest advancements to maintain peak performance.
+                                
+                                <br><b>Wi-Fi Access Control</b><br>
+                                Enhance security with our robust access control features, allowing you to manage network access for both employees and guests.
+                                
+                                <br><b>Wi-Fi Testing and Optimization</b><br>
+                                Our rigorous testing processes identify and resolve potential issues, ensuring a flawless wireless experience.
+                            </span> 
+                        </p>
+                        <a href="#" class="btn-link read-more">Read more</a>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                    
+                    <!-- Security Solutions -->
+                    <div class="services-card">
+                        <h2>Security Solutions</h2>
+                        <figure class="card-icon">
+                            <img src="{% static 'images/acess-control.jpg' %}" width="110" height="110" alt="fiber splicing, termination and testing">
+                        </figure>
+                        <p class="card-text">
+                            <b>Access Control and Security</b><br>
+                            Oxynet Security Systems specializes in enhancing property security through advanced access control solutions. 
+                            <span class="more-text">
+                                Our expertise encompasses the installation, maintenance, and optimization of automated gate systems, ensuring seamless operation and longevity. Additionally, we excel in integrating multiple security components such as CCTV, alarms, and access control systems to create a comprehensive and robust security infrastructure tailored to your specific needs.
+                                
+                                <br><br><b>
+                                    Network Infrastructure and Communication Systems
+                                </b><br>
+                                We offer comprehensive solutions for both internal network infrastructure and communication systems. Our internal network solutions include expert advice, support, and installation of engineering networks, designed to ensure optimal performance and reliability. Additionally, we specialize in the design, installation, and maintenance of various communication systems, including signaling, radio, television, and information networks. Our integrated approach ensures that all aspects of your network and communication needs are met with precision and efficiency, providing a seamless and reliable infrastructure for your operations.
+                                
+                            </span> 
+                        </p>
+                        <a href="." class="btn-link read-more" target="_blank">Read more</a>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                    
+                    <!-- End -->
+                </div>
+            </section>
+            
+            <!-- WORK / PROJECTS -->
+            <section class="section work" id="work" aria-labelledby="work-label">
+                <div class="container">
+                    <h2 class="h2 section-title">Our Work</h2>
+                    <p class="section-subtitle :light" id="work-label">
+                        Latest projects we have done
+                    </p>
+                    <p class="section-text" style="text-align: center; padding: 20px;">
+                        Oxynet Company Ltd have worked with Com 21 Limited
+                        under the provisioning of maintenance service for the
+                        National Optic Fiber Backbone Infrasture(Nofbi2) in the
+                        following regions
+                    </p>
+                    <ul class="grid-list has-scrollbar">
+                        <li class="scrollbar-item">
+                            <div class="work-card">
+                                <figure class="card-banner img-holder" style="--width: 350; --height: 406;">
+                                    <img src="{% static 'images/civil-works.jpg' %}" width="350" height="406" loading="lazy" alt="civil work" class="img-cover">
+                                </figure>
+                                <div class="card-content">
+                                    <p class="card-subtitle">Nofbi2 Project</p>
+                                    <h3 class="h3 card-title">Lower Eastern Region</h3>
+                                    <a href="#" class="card-btn">
+                                        <span class="material-symbols-rounded">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="scrollbar-item">
+                            <div class="work-card">
+                                <figure class="card-banner img-holder" style="--width: 350; --height: 406;">
+                                    <img src="{% static 'images/civil-works.jpg' %}" width="350" height="406" loading="lazy" alt="civil work" class="img-cover">
+                                </figure>
+                                <div class="card-content">
+                                    <p class="card-subtitle">Nofbi2 Project</p>
+                                    <h3 class="h3 card-title">Central Region</h3>
+                                    <a href="#" class="card-btn">
+                                        <span class="material-symbols-rounded">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="scrollbar-item">
+                            <div class="work-card">
+                                <figure class="card-banner img-holder" style="--width: 350; --height: 406;">
+                                    <img src="{% static 'images/civil-works.jpg' %}" width="350" height="406" loading="lazy" alt="civil work" class="img-cover">
+                                </figure>
+                                <div class="card-content">
+                                    <p class="card-subtitle">Nofbi2 Project</p>
+                                    <h3 class="h3 card-title"> Kiambu County</h3>
+                                    <a href="#" class="card-btn">
+                                        <span class="material-symbols-rounded">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="scrollbar-item">
+                            <div class="work-card">
+                                <figure class="card-banner img-holder" style="--width: 350; --height: 406;">
+                                    <img src="{% static 'images/civil-works.jpg' %}" width="350" height="406" loading="lazy" alt="civil work" class="img-cover">
+                                </figure>
+                                <div class="card-content">
+                                    <p class="card-subtitle">Nofbi2 Project</p>
+                                    <h3 class="h3 card-title"> parts of Nairobi Region</h3>
+                                    <a href="#" class="card-btn">
+                                        <span class="material-symbols-rounded">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            
+            <!-- CONTACT US -->
+            
+            <section class="contact-us" id="contact">
+                
+                <div class="ctc-container">
+                    
+                    <span class="big-circle"></span>
+                    
+                    <img src="{% static 'images/shape.png' %}" class="square" alt="">
+                    
+                    <div class="ctc-form">
+                        
+                        <div class="ctc-contact-info">
+                            
+                            <h3 class="ctc-title">Let's get in touch</h3>
+                            
+                            <p class="ctc-text">
+                                Have a question or need assistance? Feel free to get in touch with us for any inquiries, feedback, or support. We're always here to help and would love to hear from you!
+                            </p>
+                            
+                            <div class="ctc-info">
+                                <div class="ctc-information">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    <p> Upper Hill, Nairobi, Kenya</p>
+                                </div>
+                                <div class="ctc-information">
+                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                    <p>info@oxynet.com</p>
+                                </div>
+                                <div class="ctc-information">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                    <p>0724555216</p>
+                                    
+                                </div>
+                            </div>
+                            
+                            <div class="ctc-social-media">
+                                <p>Connect with us :</p>
+                                <div class="ctc-social-icons">
+                                    <a href="#">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-instagram"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="ctc-contact-form">
+                            <span class="circle one"></span>
+                            
+                            <span class="circle two"></span>
+
+                            {% if message_sent %}
+                            <div class="alert alert-success alert-dismissible fade show custom-alert" role="alert">
+                                <strong>Success!</strong> Your message has been sent successfully. 
+                                <!-- We will get back to you shortly. -->
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">&times;</button>
+                            </div>
+                            {% endif %}
+
+                            <form id="contactForm" method = "POST">
+                                {% csrf_token %}
+                                <h3 class="ctc-title">Contact Us</h3>
+                                
+                                <div class="ctc-input-container">
+                                    <input type="text" name="name" class="input" id="username">
+                                    <label for="username">Username</label>
+                                    <span class="placeholder">Username</span>
+                                </div>
+                                <div class="ctc-input-container">
+                                    <input type="email" name="email" class="input" id="email">
+                                    <label for="email">Email</label>
+                                    <span class="placeholder">Email</span>
+                                </div>
+                                <div class="ctc-input-container">
+                                    <input type="tel" name="phone" class="input" id="phone">
+                                    <label for="phone">Phone</label>
+                                    <span class="placeholder">Phone</span>
+                                </div>
+                                <div class="ctc-input-container textarea">
+                                    <textarea name="message" class="input" id="message"></textarea>
+                                    <label for="message">Message</label>
+                                    <span class="placeholder">Message</span>
+                                </div>
+                                <input type="submit" value="Send" class="ctc-btn">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            
+        </article>
+        <div class="back">
+            <a href="#hero">↑</a>
+            <!-- Top ⇪ ⇑-->
+        </div>
+    </main>
+    
+    <!-- FOOTER -->
+    <footer class="footer" id="contact">
+        <div class="footer-top section">
+            <div class="container">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="{% static 'images/logo.png' %}" width="85" height="67" alt="oxynet home">
+                    </a>
+                    <p class="footer-text">
+                        Delivering cost-effective optical fiber installation and structured cabling services.
+                    </p>
+                    <ul class="social-list">
+                        <li>
+                            <a href="#" class="social-link">
+                                <img src="{% static 'images/facebook.svg' %}" alt="facebook">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="social-link">
+                                <img src="{% static 'images/instagram.svg' %}" alt="instagram">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="social-link">
+                                <img src="{%static 'images/twitter.svg' %}" alt="twitter">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <ul class="footer-list">
+                    <li>
+                        <p class="h3">Opening Hours</p>
+                    </li>
+                    <li>
+                        <p class="p">Monday – Friday</p>
+                        <span class="span">0800hrs – 1800hrs</span>
+                    </li>
+                    <li>
+                        <p class="p">Saturday</p>
+                        <span class="span"> 0900hrs – 1400hrs </span>
+                    </li>
+                    <li>
+                        <p class="p">Sunday</p>
+                        <span class="span">1000hrs – 1400hrs </span>
+                    </li>
+                </ul>
+                
+                <ul class="footer-list">
+                    <li>
+                        <p class="h3">Contact Info</p>
+                    </li>
+                    <li>
+                        <a href="tel:" class="footer-link">
+                            <span class="material-symbols-rounded">call</span>
+                            <span class="span">+254 721 851774</span> 
+                        </a>
+                        <a href="tel:" class="footer-link">
+                            &nbsp;&nbsp;&nbsp;&nbsp; <span class="span">+254 721 255335</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:oxynet@gmail.com" class="footer-link">
+                            <span class="material-symbols-rounded">mail</span>
+                            <span class="span">oxynet@gmail.com</span>
+                        </a>
+                    </li>
+                    <li>
+                        <address class="footer-link address">
+                            <span class="material-symbols-rounded">location_on</span>
+                            <span class="span">Office Location</span>
+                        </address>
+                    </li>
+                </ul>
+            </div>
+            
+            <img src="{% static 'images/footer-shape-3.png' %}" width="637" height="173" loading="lazy"  alt="Shape" class="shape shape-3 move-anim-2" style="opacity: 0.5;">
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright">Copyright 2024, Oxynet. All Rights Reserved.</p>
+                <img src="{% static 'images/world-spin-removebg-preview.png' %}" width="805" height="652" loading="lazy" alt="World Spin" class="shape shape-1 move-anim">
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Custom js link -->
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Contact Us page
+        
+        document.addEventListener("DOMContentLoaded", () => {
+            
+            const inputs = document.querySelectorAll(".input");
+            
+            function focusFunc(){
+                let parent = this.parentNode;
+                parent.classList.add('focus');
+            }
+            
+            function blurFunc(){
+                let parent = this.parentNode;
+                if(this.value ==""){
+                    parent.classList.remove('focus');
+                }
+            }
+            
+            inputs.forEach((input) => {
+                input.addEventListener("focus", focusFunc);
+                input.addEventListener("blur", blurFunc);
+            });
+        });
+    </script>
+</body>
+</html>
